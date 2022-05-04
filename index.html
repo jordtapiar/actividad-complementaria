@@ -124,10 +124,10 @@
 
     <script>
         $("#enviar").click(function(){
-            $.get("https://www.themealdb.com/api/json/v1/1/categories.php", 
+            $.get("https://www.thesportsdb.com/api/v1/json/2/all_sports.php ", 
                 function(data){
-                    $.each(data.categories, function(i, item){
-                        $("#categorias").append("<tr><td>" + item.idCategory + "</td><td>" + item.strCategory + "</td><td> <img src='" + item.strCategoryThumb + "'>" + "</td><td>" + item.strCategoryDescription + "</td></tr>")
+                    $.each(data.sport, function(i, item){
+                        $("#categorias").append("<tr><td>" + item.idSport + "</td><td>" + item.strSport + "</td><td> <img src='" + item.strSportThumb + "'>" + "</td><td>" + item.strSportDescription + "</td></tr>")
                     });
 
                 });
